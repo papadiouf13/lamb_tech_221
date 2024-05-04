@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\FiliereController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SalleController;
+use App\Http\Controllers\NiveauController;
+use App\Http\Controllers\FiliereController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('filiere', FiliereController::class )->only(['index','store','update','destroy']);
+Route::apiResource('niveau', NiveauController::class )->only(['index','store','update','destroy']);
+Route::apiResource('salle', SalleController::class )->only(['index','store','update','destroy']);
+
