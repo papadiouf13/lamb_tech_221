@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FiliereController;
+use App\Http\Controllers\ModuleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('filiere', FiliereController::class )->only(['index','store','update','destroy']);
+Route::apiResource('module', ModuleController::class )->only(['index','store','update','destroy']);
